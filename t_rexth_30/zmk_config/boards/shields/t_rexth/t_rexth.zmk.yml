@@ -1,0 +1,12 @@
+file_format: "1"
+id: t_rexth
+name: T Rexth
+type: shield
+url: https://github.com/erhickey/t_rexth/
+requires:
+  - pro_micro
+features:
+  - keys
+siblings:
+  - t_rexth_right
+  - t_rexth_left

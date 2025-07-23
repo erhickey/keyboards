@@ -1,0 +1,56 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+&lt {
+  tapping-term-ms = <250>;
+  quick-tap-ms = <200>;
+  flavor = "balanced";
+};
+
+&mt {
+  tapping-term-ms = <250>;
+  quick-tap-ms = <200>;
+  flavor = "tap-preferred";
+};
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    qwerty {
+    bindings = <
+                &kp W         &kp E         &kp R           &kp T               &kp Y      &kp U           &kp I          &kp O
+      &lt 3 A   &mt LGUI S    &mt LALT D    &mt LCTRL F     &kp G               &kp H      &mt LCTRL J     &mt LALT K     &mt LGUI L      &lt 3 P
+      &kp Z     &kp X         &kp C         &kp V           &kp B               &kp N      &kp M           &kp Q          &kp TAB         &kp ENTER
+                                                            &kp LSHIFT          &lt 2 SPACE
+    >;
+    };
+
+    colemak-dh {
+    bindings = <
+                &kp W         &kp F         &kp P           &kp B               &kp J      &kp L           &kp U          &kp Y
+      &lt 3 A   &mt LGUI R    &mt LALT S    &mt LCTRL T     &kp G               &kp M      &mt LCTRL N     &mt LALT E     &mt LGUI I      &lt 3 O
+      &kp Z     &kp X         &kp C         &kp D           &kp V               &kp K      &kp H           &kp Q          &kp TAB         &kp ENTER
+                                                            &kp LSHIFT          &lt 2 SPACE
+    >;
+    };
+
+    layer2 {
+    bindings = <
+                &kp LPAR      &kp RPAR      &kp EQUAL       &none               &none      &none           &none          &none
+      &kp GRAVE &mt LGUI LBKT &mt LALT RBKT &mt LCTRL MINUS &none               &none      &mt LCTRL ESC   &mt LALT BSPC  &mt LGUI APOS   &kp SEMI
+      &none     &none         &none         &none           &none               &none      &kp BSLH        &kp COMMA      &kp DOT         &kp SLASH
+                                                            &kp LSHIFT          &trans
+    >;
+    };
+
+    layer3 {
+    bindings = <
+                &kp HOME      &kp UP        &kp END         &kp INS             &none      &kp N7          &kp N8         &kp N9
+      &trans    &kp LEFT      &kp DOWN      &kp RIGHT       &kp DEL             &none      &mt LCTRL N4    &mt LALT N5    &mt LGUI N6     &trans
+      &none     &none         &to 1         &to 0           &none               &none      &kp N1          &kp N2         &kp N3          &none
+                                                            &kp LSHIFT          &kp KP_N0
+    >;
+    };
+  };
+};

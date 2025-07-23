@@ -1,0 +1,22 @@
+config ZMK_BLE
+  default y
+
+config ZMK_USB
+  default y
+
+if SHIELD_T_REXTH_LEFT
+
+config ZMK_KEYBOARD_NAME
+  default "T Rexth"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
+
+endif
+
+if SHIELD_T_REXTH_LEFT || SHIELD_T_REXTH_RIGHT
+
+config ZMK_SPLIT
+  default y
+
+endif

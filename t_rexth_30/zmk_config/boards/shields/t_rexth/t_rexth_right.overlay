@@ -1,0 +1,7 @@
+// t_rexth_right.overlay
+
+#include "t_rexth.dtsi"
+
+&default_transform {
+    col-offset = <15>;
+};
