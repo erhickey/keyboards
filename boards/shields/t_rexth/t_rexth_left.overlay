@@ -1,0 +1,14 @@
+#include "t_rexth.dtsi"
+
+&pinctrl {
+  pio0_uart0_default: pio0_uart0_default {
+    rx_pins {
+      pinmux = <PIO0_P12>;
+      input-enable;
+      bias-pull-up;
+    };
+    tx_pins {
+      pinmux = <PIO0_P13>;
+    };
+  };
+};

@@ -1,8 +1,8 @@
 file_format: "1"
 id: t_rexth
-name: T Rexth
+name: T-Rexth
 type: shield
-url: https://github.com/erhickey/t_rexth/
+url: https://github.com/erhickey/t-rexth/
 requires:
   - pro_micro
 features:

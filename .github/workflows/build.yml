@@ -1,21 +1,8 @@
 name: Build keyboard firmware
-
-on:
-  workflow_dispatch:
-    inputs:
-      target:
-        type: choice
-        description: Keyboard firmware to build
-        required: true
-        default: t_rexth_36
-        options:
-        - t_rexth_36
-        - t_rexth_30
+on: workflow_dispatch
 
 jobs:
   build-zmk:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      build_matrix_path: '${{ github.event.inputs.target }}/build.yaml'
-      config_path: '${{ github.event.inputs.target }}/zmk_config'
-      archive_name: '${{ github.event.inputs.target }}_firmware'
+      build_matrix_path: t-rexth.yaml
