@@ -2,9 +2,11 @@
 
 ## Firmware
 
-[corne](./corne) contains QMK configuration and scripts to build firmware.
+[corne](./corne) - QMK configuration
 
-This repo also has configuration to build ZMK firmware for split keyboards using Adafruit KB2040 controllers.
+[t-rexth](./t-rexth) - KMK configuration.
+
+This repo also has configuration for building ZMK firmware for a wired split keyboard using Adafruit KB2040 controllers. This is a WIP, the configuration builds, but the controllers are unresponsive after flashing.
 
 ## Custom Keyboards
 
