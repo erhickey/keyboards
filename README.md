@@ -1,6 +1,10 @@
 # Keyboards
 
-Custom keyboards and keyboard layouts
+## Firmware
+
+[corne](./corne) contains QMK configuration and scripts to build firmware.
+
+This repo also has configuration to build ZMK firmware for split keyboards using Adafruit KB2040 controllers.
 
 ## Custom Keyboards
 
