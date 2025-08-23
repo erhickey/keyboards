@@ -1,6 +1,24 @@
-#include <rpi_pico/rp2040.dtsi>
-#include <zephyr/dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+
+&gpio0 {
+  status = "okay";
+};
+
+zephyr_udc0: &usbd {
+  status = "okay";
+};
+
+&pio0 {
+  status = "okay";
+
+  pio0_uart0: serial {
+    status = "okay";
+    compatible = "raspberrypi,pico-uart-pio";
+    pinctrl-0 = <&pio0_uart0_default>;
+    pinctrl-names = "default";
+    current-speed = <115200>;
+  };
+};
 
 / {
   chosen {
@@ -49,24 +67,4 @@
     compatible = "zmk,wired-split";
     device = <&pio0>;
   };
-};
-
-&gpio0 {
-  status = "okay";
-};
-
-&pio0 {
-  status = "okay";
-
-  pio0_uart0: serial {
-    status = "okay";
-    compatible = "raspberrypi,pico-uart-pio";
-    pinctrl-0 = <&pio0_uart0_default>;
-    pinctrl-names = "default";
-    current-speed = <115200>;
-  };
-};
-
-zephyr_udc0: &usbd {
-  status = "okay";
 };
