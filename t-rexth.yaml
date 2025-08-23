@@ -12,10 +12,5 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: adafruit_kb2040
-    shield: t_rexth_left
-    snippet: zmk-usb-logging
-  - board: adafruit_kb2040
-    shield: t_rexth_right
-    snippet: zmk-usb-logging
+board: [adafruit_kb2040]
+shield: ["t_rexth_left", "t_rexth_right"]
