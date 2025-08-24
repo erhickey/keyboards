@@ -14,8 +14,8 @@ zephyr_udc0: &usbd {
       pinmux = <I2C0_SDA_P12>, <I2C0_SCL_P13>;
       input-enable;
       input-schmitt-enable;
-    }
-  }
+    };
+  };
 };
 
 &i2c0 {
