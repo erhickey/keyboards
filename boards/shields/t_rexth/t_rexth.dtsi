@@ -11,7 +11,7 @@ zephyr_udc0: &usbd {
 &pinctrl {
   i2c0_default: i2c0_default {
     group1 {
-      pinmux = <I2C0_SDA_P12, I2C0_SCL_P13>;
+      pinmux = <I2C0_SDA_P12>, <I2C0_SCL_P13>;
       input-enable;
       input-schmitt-enable;
     }
