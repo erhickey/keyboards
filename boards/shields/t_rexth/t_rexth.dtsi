@@ -9,28 +9,20 @@ zephyr_udc0: &usbd {
 };
 
 &pinctrl {
-  pio0_uart0_default: pio0_uart0_default {
-    tx_pins {
-      pinmux = <PIO0_P12>;
-    };
-    rx_pins {
-      pinmux = <PIO0_P13>;
+  i2c0_default: i2c0_default {
+    group1 {
+      pinmux = <I2C0_SDA_P12, I2C0_SCL_P13>;
       input-enable;
-      bias-pull-up;
-    };
-  };
+      input-schmitt-enable;
+    }
+  }
 };
 
-&pio0 {
+&i2c0 {
   status = "okay";
-
-  pio0_uart0: serial {
-    status = "okay";
-    compatible = "raspberrypi,pico-uart-pio";
-    pinctrl-0 = <&pio0_uart0_default>;
-    pinctrl-names = "default";
-    current-speed = <115200>;
-  };
+  pinctrl-0 = <&i2c0_default>;
+  pinctrl-names = "default";
+  clock-frequency = <I2C_BITRATE_STANDARD>;
 };
 
 / {
