@@ -8,6 +8,19 @@ zephyr_udc0: &usbd {
   status = "okay";
 };
 
+&pinctrl {
+  pio0_uart0_default: pio0_uart0_default {
+    tx_pins {
+      pinmux = <PIO0_P12>;
+    };
+    rx_pins {
+      pinmux = <PIO0_P13>;
+      input-enable;
+      bias-pull-up;
+    };
+  };
+};
+
 &pio0 {
   status = "okay";
 
