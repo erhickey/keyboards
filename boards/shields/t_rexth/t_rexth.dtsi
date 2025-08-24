@@ -29,7 +29,6 @@ zephyr_udc0: &usbd {
   chosen {
     zmk,kscan = &kscan0;
     zmk,matrix_transform = &default_transform;
-    zmk,split-uart = &pio0_uart0;
   };
 
   default_transform: keymap_transform_0 {
