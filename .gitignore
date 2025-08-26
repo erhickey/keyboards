@@ -4,3 +4,9 @@ keymap.c
 *.hex
 
 kmk
+
+build
+modules
+.west
+zephyr
+zmk
