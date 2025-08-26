@@ -6,7 +6,7 @@
 
 [t-rexth](./t-rexth) - KMK configuration.
 
-This repo also has configuration for building ZMK firmware for a wired split keyboard using Adafruit KB2040 controllers. This is a WIP, the configuration builds, but the controllers are unresponsive after flashing.
+This repo also has ZMK firmware [configuration](./boards/shields/t_rexth) for a wired split keyboard using Adafruit KB2040 controllers.
 
 ## Custom Keyboards
 
