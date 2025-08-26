@@ -65,6 +65,6 @@ zephyr_udc0: &usbd {
 
   wired_split {
     compatible = "zmk,wired-split";
-    device = <&pio0>;
+    device = <&pio0_uart0>;
   };
 };
